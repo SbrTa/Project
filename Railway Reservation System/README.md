@@ -1,4 +1,3 @@
-# railway-reservation-system
-Ticket issuing application in php 
-U can booking a ticket 
-Cancel the Ticket by PNR (passenger name record ) .
+# Railway Reservation System
+
+A railway reservation system where you can check train schedule, current status, available ticket and you alse can buy ticket.
