@@ -1,3 +1,3 @@
 # railway-reservation-system
 
-A railway reservation system where you can check train status, vailable ticket and you alse can buy ticket.
+A railway reservation system where you can check train schedule, current status, available ticket and you alse can buy ticket.
