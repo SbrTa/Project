@@ -23,8 +23,8 @@
             <HBox spacing="15.0">
                <children>
                   <Region prefHeight="0.0" prefWidth="197.0" />
-                  <TextField promptText="User Name" />
-                  <PasswordField promptText="Password" />
+                  <TextField id="loginUserName" fx:id="loginUserName" onAction="#loginButton" promptText="User Name" />
+                  <PasswordField fx:id="loginPassword" promptText="Password" />
                   <Button mnemonicParsing="false" onAction="#loginButton" prefHeight="25.0" prefWidth="66.0" text="Log In" />
                </children>
                <padding>
@@ -33,6 +33,12 @@
                <VBox.margin>
                   <Insets />
                </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Region prefHeight="17.0" prefWidth="181.0" />
+                  <Label fx:id="labelWrongUserPass" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="337.0" />
+               </children>
             </HBox>
          </children></VBox>
    </top>
