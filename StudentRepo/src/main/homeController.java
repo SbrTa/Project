@@ -10,7 +10,7 @@ public class homeController {
 
     @FXML private void logOutButton() throws Exception{
         Stage stage = Main.stage;
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../fxml/main.fxml"));
         stage.setScene(new Scene(root));
         stage.setTitle("Student Repo");
         stage.show();
@@ -19,7 +19,7 @@ public class homeController {
 
     @FXML private  void addStudentButton() throws Exception{
         Stage stage = Main.stage;
-        Parent root = FXMLLoader.load(getClass().getResource("addStudent.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../fxml/addStudent.fxml"));
         stage.setScene(new Scene(root));
         stage.setTitle("Student Repo");
         stage.show();

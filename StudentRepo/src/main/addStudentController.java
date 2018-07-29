@@ -37,7 +37,7 @@ public class addStudentController {
         alert.showAndWait();
 
         Stage stage = Main.stage;
-        Parent root = FXMLLoader.load(getClass().getResource("home.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../fxml/home.fxml"));
         stage.setScene(new Scene(root));
         stage.setTitle("Student Repo");
         stage.show();

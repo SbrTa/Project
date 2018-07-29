@@ -29,7 +29,7 @@ public class mainController implements Initializable{
         //System.out.println(pass);
         if(user.equals("user") && pass.equals("pass")){
             stage = Main.stage;
-            Parent homeRoot = FXMLLoader.load(getClass().getResource("home.fxml"));
+            Parent homeRoot = FXMLLoader.load(getClass().getResource("/fxml/home.fxml"));
             stage.setScene(new Scene(homeRoot));
             stage.setTitle("Student Repo");
             stage.show();
@@ -42,7 +42,7 @@ public class mainController implements Initializable{
         }*/
         else{
             stage = Main.stage;
-            Parent homeRoot = FXMLLoader.load(getClass().getResource("home.fxml"));
+            Parent homeRoot = FXMLLoader.load(getClass().getResource("/fxml/home.fxml"));
             stage.setScene(new Scene(homeRoot));
             stage.setTitle("Student Repo");
             stage.show();
