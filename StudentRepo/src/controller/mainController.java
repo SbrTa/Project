@@ -1,4 +1,4 @@
-package main;
+package controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import main.Main;
 
 import java.awt.event.ActionEvent;
 import java.io.IOException;

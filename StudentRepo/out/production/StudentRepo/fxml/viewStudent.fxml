@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.viewStudentController">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Region prefHeight="70.0" prefWidth="600.0" />
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Region prefHeight="100.0" prefWidth="56.0" />
+                  <TableView fx:id="tableView" prefHeight="100.0" prefWidth="501.0">
+                    <columns>
+                        <TableColumn fx:id="firstName" editable="false" prefWidth="68.0" text="First Name" />
+                        <TableColumn fx:id="lastName" editable="false" prefWidth="69.0" text="Last Name" />
+                        <TableColumn fx:id="dept" editable="false" prefWidth="48.0" text="Dept" />
+                        <TableColumn fx:id="id" editable="false" prefWidth="69.0" text="ID" />
+                        <TableColumn fx:id="phone" editable="false" prefWidth="97.0" text="Phone" />
+                        <TableColumn fx:id="email" editable="false" prefWidth="149.0" text="Email" />
+                    </columns>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Region prefHeight="100.0" prefWidth="483.0" />
+                  <Button mnemonicParsing="false" onAction="#homeButton" text="home" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
