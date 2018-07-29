@@ -18,6 +18,11 @@ public class homeController {
     }
 
     @FXML private  void addStudentButton() throws Exception{
-
+        Stage stage = Main.stage;
+        Parent root = FXMLLoader.load(getClass().getResource("addStudent.fxml"));
+        stage.setScene(new Scene(root));
+        stage.setTitle("Student Repo");
+        stage.show();
+        System.out.println("add student");
     }
 }

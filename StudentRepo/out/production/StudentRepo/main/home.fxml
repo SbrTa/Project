@@ -25,7 +25,7 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="224.0" layoutY="91.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="134.0" text="Add Student" />
+            <Button layoutX="224.0" layoutY="91.0" mnemonicParsing="false" onAction="#addStudentButton" prefHeight="46.0" prefWidth="134.0" text="Add Student" />
             <Button layoutX="223.0" layoutY="157.0" mnemonicParsing="false" prefHeight="47.0" prefWidth="135.0" text="View Student" />
          </children>
       </AnchorPane>
