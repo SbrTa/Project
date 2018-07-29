@@ -1,1 +1,3 @@
-A simple student management system developed using Hibernate and JavaFx.
+A simple student management system
+
+Technology: Hibernate and JavaFx.
