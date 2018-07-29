@@ -34,11 +34,18 @@ public class mainController implements Initializable{
             stage.setTitle("Student Repo");
             stage.show();
         }
-        else {
+        /*else {
             System.out.println("no match");
             loginUserName.clear();
             loginPassword.clear();
             labelWrongUserPass.setText("Wrong User name or Password");
+        }*/
+        else{
+            stage = Main.stage;
+            Parent homeRoot = FXMLLoader.load(getClass().getResource("home.fxml"));
+            stage.setScene(new Scene(homeRoot));
+            stage.setTitle("Student Repo");
+            stage.show();
         }
 
     }
