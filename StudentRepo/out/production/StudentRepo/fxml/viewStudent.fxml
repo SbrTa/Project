@@ -11,11 +11,35 @@
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <Region prefHeight="70.0" prefWidth="600.0" />
-            <HBox prefHeight="100.0" prefWidth="200.0">
+            <HBox>
+               <children>
+                  <Region prefHeight="35.0" prefWidth="167.0" />
+                  <SplitMenuButton contentDisplay="RIGHT" mnemonicParsing="false" text="Search Student by">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#searchByNameItem" text="Name" />
+                        <MenuItem mnemonicParsing="false" text="Department" />
+                        <MenuItem mnemonicParsing="false" text="Student ID" />
+                    </items>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </SplitMenuButton>
+                  <TextField fx:id="searchTextField" onAction="#searchButton">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="searchButtonID" mnemonicParsing="false" onAction="#searchButton" text="Search">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox prefHeight="295.0" prefWidth="600.0">
                <children>
                   <Region prefHeight="100.0" prefWidth="56.0" />
-                  <TableView fx:id="tableView" prefHeight="100.0" prefWidth="501.0">
+                  <TableView fx:id="tableView" prefHeight="150.0" prefWidth="501.0">
                     <columns>
                         <TableColumn fx:id="firstName" editable="false" prefWidth="68.0" text="First Name" />
                         <TableColumn fx:id="lastName" editable="false" prefWidth="69.0" text="Last Name" />
@@ -33,10 +57,22 @@
             <HBox prefHeight="100.0" prefWidth="200.0">
                <children>
                   <Region prefHeight="100.0" prefWidth="483.0" />
-                  <Button mnemonicParsing="false" onAction="#homeButton" text="home" />
                </children>
             </HBox>
          </children>
       </VBox>
    </center>
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#backButton" text="Back" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+              </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
 </BorderPane>

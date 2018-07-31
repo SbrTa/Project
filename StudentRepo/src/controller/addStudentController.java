@@ -12,6 +12,8 @@ import javafx.stage.Stage;
 import main.Main;
 import org.hibernate.Session;
 
+import java.io.IOException;
+
 public class addStudentController {
     @FXML private TextField firstNameTF;
     @FXML private TextField lastNameTF;
@@ -57,6 +59,14 @@ public class addStudentController {
         alert.showAndWait();
 
         //Go to home page
+        Stage stage = Main.stage;
+        Parent root = FXMLLoader.load(getClass().getResource("../fxml/home.fxml"));
+        stage.setScene(new Scene(root));
+        stage.setTitle("Student Repo");
+        stage.show();
+    }
+
+    @FXML private void backButton() throws IOException {
         Stage stage = Main.stage;
         Parent root = FXMLLoader.load(getClass().getResource("../fxml/home.fxml"));
         stage.setScene(new Scene(root));

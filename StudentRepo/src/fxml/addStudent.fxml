@@ -15,7 +15,6 @@
             <VBox prefHeight="400.0" prefWidth="206.0" />
             <VBox prefHeight="390.0" prefWidth="204.0">
                <children>
-                  <Region prefHeight="81.0" prefWidth="235.0" />
                   <TextField fx:id="firstNameTF" onAction="#registerButton" promptText="First Name" style="-fx-border-radius: 100;">
                      <VBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -80,4 +79,17 @@
          </children>
       </HBox>
    </center>
+   <top>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <ToolBar prefHeight="40.0" prefWidth="200.0">
+              <items>
+                <Button mnemonicParsing="false" onAction="#backButton" text="Back" />
+                  <Button mnemonicParsing="false" text="Button" />
+                  <Button mnemonicParsing="false" text="Button" />
+              </items>
+            </ToolBar>
+         </children>
+      </VBox>
+   </top>
 </BorderPane>
