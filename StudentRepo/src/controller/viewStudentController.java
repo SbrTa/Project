@@ -32,7 +32,7 @@ public class viewStudentController implements Initializable{
 
     @FXML private TextField searchTextField;
     @FXML Button searchButtonID;
-    private int item=0;
+    private int searchItem=0;
 
 
     @Override
@@ -63,22 +63,53 @@ public class viewStudentController implements Initializable{
         searchTextField.setPromptText("Enter Name");
         searchTextField.setVisible(true);
         searchButtonID.setVisible(true);
-        item=0;
+        searchItem=1;
     }
+    @FXML private void searchByDeptItem() throws Exception{
+        //tableView.setItems(getAllStudent());
+        searchTextField.setPromptText("Enter Dept");
+        searchTextField.setVisible(true);
+        searchButtonID.setVisible(true);
+        searchItem=2;
+    }
+    @FXML private void searchBySidItem() throws Exception{
+        //tableView.setItems(getAllStudent());
+        searchTextField.setPromptText("Enter S-ID");
+        searchTextField.setVisible(true);
+        searchButtonID.setVisible(true);
+        searchItem=3;
+    }
+
+
+
+
 
     @FXML private void searchButton() throws Exception{
-        System.out.println("Search Button........");
-        String name = searchTextField.getText();
-        System.out.println(name);
-        //tableView.setItems(getAllStudentbyName(name));
-
+        String param = searchTextField.getText();
+        tableView.setItems(getAllStudentby(param));
+        searchTextField.setVisible(false);
+        searchTextField.setText("");
+        searchButtonID.setVisible(false);
     }
 
 
-    public ObservableList<Student> getAllStudentbyName(String name) throws Exception{
+    public ObservableList<Student> getAllStudentby(String param){
         Session session = createHibernateSession.hibernateSession();
-        Query query = session.createQuery("FROM student where firstName = :name");
-        query.setParameter("name",1);
+        Query query = null;
+        System.out.println(param+searchItem);
+        if(searchItem==1){
+            query = session.createQuery("FROM Student where firstname like :v1 or lastname like :v2");
+            query.setParameter("v1",("%"+param+"%"));
+            query.setParameter("v2",("%"+param+"%"));
+        }
+        else if(searchItem==2){
+            query = session.createQuery("FROM Student where dept like :v1");
+            query.setParameter("v1",("%"+param+"%"));
+        }
+        else if(searchItem==3){
+            query = session.createQuery("FROM Student where sid like :v1");
+            query.setParameter("v1",("%"+param+"%"));
+        }
         List<Student> studentList = query.list();
         for (Student student : studentList){
             System.out.println(student);

@@ -17,8 +17,8 @@
                   <SplitMenuButton contentDisplay="RIGHT" mnemonicParsing="false" text="Search Student by">
                     <items>
                       <MenuItem mnemonicParsing="false" onAction="#searchByNameItem" text="Name" />
-                        <MenuItem mnemonicParsing="false" text="Department" />
-                        <MenuItem mnemonicParsing="false" text="Student ID" />
+                        <MenuItem mnemonicParsing="false" onAction="#searchByDeptItem" text="Department" />
+                        <MenuItem mnemonicParsing="false" onAction="#searchBySidItem" text="Student ID" />
                     </items>
                      <HBox.margin>
                         <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
